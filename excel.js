@@ -25,8 +25,9 @@ document.getElementById('button').addEventListener("click", () => {
         let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);
         console.log(rowObject);
         allSheets.push(rowObject)
-        document.getElementById("jsondata").innerHTML = JSON.stringify(rowObject, undefined, 4)
+        // document.getElementById("jsondata").innerHTML = JSON.stringify(rowObject, undefined, 4)
       });
+      document.getElementById("jsondata").innerHTML = JSON.stringify(allSheets)
       sessionStorage.setItem('allSheets', JSON.stringify(allSheets))
       localStorage.setItem('allSheets', JSON.stringify(allSheets))
     }
