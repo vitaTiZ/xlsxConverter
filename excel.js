@@ -28,6 +28,7 @@ document.getElementById('button').addEventListener("click", () => {
         document.getElementById("jsondata").innerHTML = JSON.stringify(rowObject, undefined, 4)
       });
       sessionStorage.setItem('allSheets', JSON.stringify(allSheets))
+      localStorage.setItem('allSheets', JSON.stringify(allSheets))
     }
   }
 });
